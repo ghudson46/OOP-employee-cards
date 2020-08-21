@@ -19,6 +19,11 @@ inquirer
 .prompt([
   {
     type: 'string',
+    name: 'name',
+    message: 'What is your name?'
+  },
+  {
+    type: 'string',
     name: 'email',
     message: 'Enter your email address'
   },
@@ -38,16 +43,27 @@ inquirer
     message: 'Enter your github username'
   }
 ]).then((answer) => {
-  function Employee(email, id, job, github) {
+  function Employee(name, email, id, job, github) {
+    this.name = answer.name;
     this.email = answer.email;
     this.id = answer.id;
     this.job = answer.job;
     this.github = answer.github;
+    this.card = function(email, id, job, github) {
+      console.log(`
+      Name: ${answer.name} \n 
+      Email: ${answer.email} \n
+      ID: ${answer.id} \n
+      Job Title: ${answer.job} \n
+      GitHub Name: ${answer.github}
+      `);
+    }
   }
 
-  const garrett = new Employee(answer.email, answer.id, answer.job, answer.github);
+  const garrett = new Employee(answer.name, answer.email, answer.id, answer.job, answer.github);
 
-  console.log(garrett);
+  garrett.card();
+  
 }).catch(err => {
   throw err;
 });
