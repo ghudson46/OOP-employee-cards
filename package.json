@@ -1,0 +1,28 @@
+{
+  "name": "README-generator",
+  "version": "1.0.0",
+  "description": "## June 2020 Cohort (UNC-Cary-FSF-PT-06-2020-U-C)",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghudson46/README-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghudson46/README-generator/issues"
+  },
+  "homepage": "https://github.com/ghudson46/README-generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "path": "^0.12.7"
+  }
+}
